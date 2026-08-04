@@ -24,10 +24,7 @@
 .header-menu a {
     display: inline-block;
     padding: 16px 0px;
-    font-size: 18px;
     position: relative; /* Position relative para que o traço embaixo no a::after cresça em relação ao elemento pai com position relative (que é o header-menu a). Além disso, o position absolute abaixo é para tirar o traço do fluxo da página e assim não tirar o centralizado das li devido ao height de 2px e margin-top de 4 px do a::after */
-    font-family: "Poppins";
-    font-weight: 400;
 }
 
 .header-menu a::after {
