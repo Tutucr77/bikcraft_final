@@ -1,0 +1,79 @@
+.tecnologia-bg {
+    background-color: var(--cor-11);
+    box-shadow: inset 0px 80px var(--cor-0), inset 0px -80px var(--cor-0);
+}
+
+.tecnologia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.tecnologia-imagem img {
+    width: 100%; /* Sem isso, no Safari a imagem fica gigante */
+    height: 100%; /* Para a imagem ter sempre a altura do container */
+    object-fit: cover;
+    object-position: left;
+}
+
+.tecnologia-conteudo {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.tecnologia-conteudo > span {  /* span que é filho de tecnologia-conteudo */
+    display: block;
+    margin-bottom: 20px;
+}
+
+.tecnologia-conteudo h2 {
+    margin-bottom: 32px;
+}
+
+.tecnologia-conteudo > p {
+    margin-bottom: 20px;
+}
+
+.tecnologia a {
+    margin-bottom: 80px;
+}
+
+.tecnologia-vantagens {
+    display: flex;
+    gap: 40px;
+}
+
+.tecnologia-vantagens h3 {
+    margin-bottom: 8px;
+    width: max-content; /* Nunca quebra o título, pq o width tem o tamanho máximo do conteúdo, que é o tamanho máximo do h3 */
+}
+
+.tecnologia-vantagens img {
+    width: 24px; /* O SVG já diminui proporcionalmente o height junto com o width */
+    margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+    .tecnologia-bg {
+        box-shadow: initial;
+    }
+    .tecnologia {
+        grid-template-columns: 1fr;
+    }
+    .tecnologia-conteudo {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .tecnologia-imagem {
+        display: none;
+    }
+    .tecnologia a {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tecnologia-vantagens {
+        flex-direction: column;
+    }
+}
